@@ -3,9 +3,8 @@
 name: First Cron Job
        # Controls when the workflow will run
 
-
 on:
-  # Triggers the workflow every 5 minutes
+  # Triggers the workflow every 1 minutes
   schedule:
     - cron: "*/1 * * * *"
   push:
@@ -23,3 +22,11 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
+      
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9.9
+      - name: Run python test script
+        run: |
+          python main.py

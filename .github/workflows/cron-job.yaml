@@ -6,7 +6,7 @@ name: First Cron Job
 on:
   # Triggers the workflow every 1 minutes
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "*/5 * * * *"
   push:
     branches: 'main'
 
